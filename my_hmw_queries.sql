@@ -90,6 +90,19 @@ WHERE b.emp_no = '499942'
 
 -- LOL April Foolsday
 
+-- This last Query relates to the bonus, in order to determine the average salary by title
+-- This script was used directly when we used the pd.read_sql function in the jupyter notebok
+
+SELECT b.title, ROUND(AVG(a.salary),2) AS "Avg Salary" 
+FROM salaries AS a
+INNER JOIN titles AS b
+ON a.emp_no = b.emp_no
+GROUP BY title
+;
+
+SELECT DISTINCT title FROM titles
+;
+
 
 
 
