@@ -1,0 +1,42 @@
+departments
+-
+dept_no PK VARCHAR(4)
+dept_name VARCHAR(30)
+
+dept_emp
+-
+emp_no int FK >- employees.emp_no
+dept_no VARCHAR(4) FK >- departments.dept_no
+from_date DATE
+to_date DATE
+
+
+dept_manager
+-
+dept_no VARCHAR(4) FK >- departments.dept_no
+emp_no int FK >- employees.emp_no
+from_date DATE
+to_date DATE
+
+employees
+-
+emp_no PK int
+birth_date DATE
+first_name VARCHAR(30)
+last_name VARCHAR(30)
+gender VARCHAR(1)
+hire_date DATE
+
+salaries
+-
+emp_no int FK >- employees.emp_no
+salary int
+from_date DATE
+to_date DATE
+
+titles
+-
+emp_no int FK >- employees.emp_no
+title VARCHAR(30)
+from_date DATE
+to_date DATE
